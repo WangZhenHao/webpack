@@ -24,4 +24,6 @@ test/*Cases/**/*.js
 # Ignore some examples files
 examples/**/*.js
 !examples/*/webpack.config.js
+debug
+min-webpack
 
