@@ -70,7 +70,7 @@ const makeDependenciesGraph = entry => {
 
 const generateCode = entry => {
 	const graph = makeDependenciesGraph(entry);
-	console.log(graph)
+	// console.log(graph)
 	return `
         (function(graph) {
 					  'use strict';
@@ -90,4 +90,4 @@ const generateCode = entry => {
 };
 
 const code = generateCode('./src/index.js');
-// console.log(code)
+console.log(code)

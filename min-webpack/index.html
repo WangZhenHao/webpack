@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+// 		{
+//   './src/index.js': {
+//     dependencies: {
+//       './bundler-utils/say-hello.js': './src\\bundler-utils\\say-hello.js',
+//       './bundler-utils/message.js': './src\\bundler-utils\\message.js'
+//     },
+//     code: '"use strict";\n' +
+//       '\n' +
+//       'var _sayHello = _interopRequireDefault(require("./bundler-utils/say-hello.js"));\n' +
+//       '\n' +
+//       'var _message = _interopRequireDefault(require("./bundler-utils/message.js"));\n' +
+//       '\n' +
+//       'function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }\n' +
+//       '\n' +
+//       '(0, _sayHello["default"])(_message["default"]);'
+//   },
+//   './src\\bundler-utils\\say-hello.js': {
+//     dependencies: {},
+//     code: '"use strict";\n' +
+//       '\n' +
+//       'Object.defineProperty(exports, "__esModule", {\n' +
+//       '  value: true\n' +
+//       '});\n' +
+//       'exports["default"] = void 0;\n' +
+//       '\n' +
+//       '// src/bundler-utils/say-hello.js\n' +
+//       'function sayHello(word) {\n' +
+//       '  console.log(word);\n' +
+//       '}\n' +
+//       '\n' +
+//       'var _default = sayHello;\n' +
+//       'exports["default"] = _default;'
+//   },
+//   './src\\bundler-utils\\message.js': {
+//     dependencies: { './name.js': './src\\bundler-utils\\name.js' },
+//     code: '"use strict";\n' +
+//       '\n' +
+//       'Object.defineProperty(exports, "__esModule", {\n' +
+//       '  value: true\n' +
+//       '});\n' +
+//       'exports["default"] = void 0;\n' +
+//       '\n' +
+//       'var _name = require("./name.js");\n' +
+//       '\n' +
+//       '// src/bundler-utils/message.js\n' +
+//       'var _default = "hello ".concat(_name.name);\n' +
+//       '\n' +
+//       'exports["default"] = _default;'
+//   },
+//   './src\\bundler-utils\\name.js': {
+//     dependencies: {},
+//     code: '"use strict";\n' +
+//       '\n' +
+//       'Object.defineProperty(exports, "__esModule", {\n' +
+//       '  value: true\n' +
+//       '});\n' +
+//       'exports.name = void 0;\n' +
+//       '// src/bundler-utils/name.js\n' +
+//       "var name = 'LGC';\n" +
+//       'exports.name = name;'
+//   }
+// }
+
+	</script>
+	<script>
+		(function(graph) {
+                                          'use strict';
+            function require(module){
+                function localRequire(relativePath){
+                    return require(graph[module].dependencies[relativePath])
+                }
+                var exports = {};
+                (function(require, exports, code){
+                    eval(code)
+                })(localRequire, exports, graph[module].code);
+                return exports;
+            }
+            require('./src/index.js')
+        })({"./src/index.js":{"dependencies":{"./bundler-utils/say-hello.js":"./src\\bundler-utils\\say-hello.js","./bundler-utils/message.js":"./src\\bundler-utils\\message.js"},"code":"\"use strict\";\n\nvar _sayHello = _interopRequireDefault(require(\"./bundler-utils/say-hello.js\"));\n\nvar _message = _interopRequireDefault(require(\"./bundler-utils/message.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\n\n(0, _sayHello[\"default\"])(_message[\"default\"]);"},"./src\\bundler-utils\\say-hello.js":{"dependencies":{},"code":"\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports[\"default\"] = void 0;\n\n// src/bundler-utils/say-hello.js\nfunction sayHello(word) {\n  console.log(word);\n}\n\nvar _default = sayHello;\nexports[\"default\"] = _default;"},"./src\\bundler-utils\\message.js":{"dependencies":{"./name.js":"./src\\bundler-utils\\name.js"},"code":"\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports[\"default\"] = void 0;\n\nvar _name = require(\"./name.js\");\n\n// src/bundler-utils/message.js\ndebugger;\n\nvar _default = \"hello \".concat(_name.name);\n\nexports[\"default\"] = _default;"},"./src\\bundler-utils\\name.js":{"dependencies":{},"code":"\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.name = void 0;\n// src/bundler-utils/name.js\nvar name = 'LGC';\nexports.name = name;"}})
+	</script>
+</body>
+</html>

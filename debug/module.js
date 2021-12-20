@@ -1,2 +1,2 @@
 // debug/module.js
-export const mudoleName = 'module';
+export const mudoleName = 'module1';
