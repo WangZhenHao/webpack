@@ -14,7 +14,7 @@ module.exports = {
 		ecmaVersion: 2018
 	},
 	rules: {
-		"prettier/prettier": "error",
+		"prettier/prettier": "off",
 		"no-template-curly-in-string": "error",
 		"no-caller": "error",
 		"no-control-regex": "off",
