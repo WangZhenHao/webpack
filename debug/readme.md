@@ -8,3 +8,5 @@ runLoader方法hooks.readResource读取文件内容的相关钩子
 就是读取文件的最终地方，执行fs.readFile方法
 
 /lib/WebpackOptionsApply.js中的process方法就是所有插件初始化的地方
+
+# 2: watch是一个怎么样的流程

@@ -13,4 +13,8 @@ module.exports = {
 		path: path.join(__dirname, './dist'),
 	},
 	plugins: [new Test(), new CleanWebpackPlugin()],
+	watchOptions: {
+    ignored: /node_modules/,
+  },
+	watch: true,
 };
