@@ -10,3 +10,11 @@ runLoader方法hooks.readResource读取文件内容的相关钩子
 /lib/WebpackOptionsApply.js中的process方法就是所有插件初始化的地方
 
 # 2: watch是一个怎么样的流程
+1): 首先在webpack.config.js里面配置属性{ watch: true }
+
+
+
+
+
+# 3: 如何添加依赖
+

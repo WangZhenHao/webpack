@@ -8,6 +8,7 @@ const config = require('./webpack.config');
 const compiler = webpack(config, function(res) {
 	return res
 });
+
 compiler.run(function(res) {
 	return res
 });
