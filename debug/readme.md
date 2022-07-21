@@ -18,3 +18,10 @@ runLoader方法hooks.readResource读取文件内容的相关钩子
 
 # 3: 如何添加依赖
 
+
+# 4.webpack的流程
+1：执行lib/webpack.js文件中的webpack方法，该方法就是可以拿到compiler对象
+2：compiler对象是从create方法拿到的，里面执行createCompiler方法，该方法就是核心方法
+3：createCompiler执行Comiler类，实际上就是执行lib\Compiler.js里面的函数，该方法初始化的
+时候，创建很多钩子hooks，定义很多初始值
+4: 初始化之后，执行自定义的插件
