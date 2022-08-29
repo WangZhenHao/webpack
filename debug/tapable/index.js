@@ -1,3 +1,8 @@
+/**
+ 同步钩子 tap/call
+
+ */
+
 const { SyncHook } =  require('tapable')
 
 class FrontEnd {

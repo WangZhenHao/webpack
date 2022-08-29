@@ -1,3 +1,8 @@
+/**
+ 异步钩子 tapAsync/callAsync + tapPromise/promise
+
+ */
+
 const { AsyncParallelHook  } =  require('tapable')
 
 class FrontEnd {

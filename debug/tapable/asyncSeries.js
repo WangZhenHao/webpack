@@ -1,3 +1,9 @@
+/**
+ 并行
+
+ */
+
+
 const { AsyncSeriesHook } =  require('tapable')
 
 class FrontEnd {
