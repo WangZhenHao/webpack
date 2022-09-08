@@ -38,3 +38,12 @@ Xiaobai.hooks.bundler.tapAsync('learn bundler2', (bundler, callback) => {
 
 console.time('costTime');
 Xiaobai.learnBundler('webpack')
+/**
+
+Xiaobai learn webpack for the first time
+
+Xiaobai learn webpack for the second time
+
+costTime: 3.018s
+
+ */

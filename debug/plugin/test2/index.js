@@ -1,15 +1,15 @@
-class Test1 {
+class Test2 {
 	constructor() {
         this.index = 1;
 	}
 
 	apply(compiler) {
         this.index++;
-		compiler.hooks.done.tap('test1', () => {
-			console.log('test1', this.index)
+		compiler.hooks.done.tap('test2', () => {
+			console.log('test2', this.index)
 		})
 		// console.log(compiler, '---------------->')
 	}
 }
 
-module.exports = Test1;
+module.exports = Test2;

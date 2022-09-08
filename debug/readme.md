@@ -25,3 +25,5 @@ runLoader方法hooks.readResource读取文件内容的相关钩子
 3：createCompiler执行Comiler类，实际上就是执行lib\Compiler.js里面的函数，该方法初始化的
 时候，创建很多钩子hooks，定义很多初始值
 4: 初始化之后，执行自定义的插件
+
+

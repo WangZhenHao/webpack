@@ -1,7 +1,8 @@
 // debug/webpack.config.js
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const Test = require('./plugin/test/index.js')
+const Test1 = require('./plugin/test/index.js')
+const Test2 = require('./plugin/test2/index.js')
 
 module.exports = {
 	// 选择调试开发环境
@@ -12,7 +13,7 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, './dist'),
 	},
-	plugins: [new Test(), new CleanWebpackPlugin()],
+	plugins: [new Test1(), new Test2(), new CleanWebpackPlugin()],
 	watchOptions: {
     ignored: /node_modules/,
   },
