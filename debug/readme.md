@@ -4,8 +4,13 @@
 
 runLoader方法hooks.readResource读取文件内容的相关钩子
 
+读取文件：
 /lib/schemes/FileUriPlugin.js中FileUriPlugin插件hooks.readResource.for(undefined).tapAsync("FileUriPlugin")
 就是读取文件的最终地方，执行fs.readFile方法
+
+输出文件：
+lib\Compiler.js 中的emitAssets方法执行输出文件，在输出文件之前，会先执行hooks.emit.callAsync(...)钩子
+比如clean-webpack-plugin 插件清空文件就是在这种在hooks.emit.tap('clean-webpack-plugin', () => {})操作的
 
 /lib/WebpackOptionsApply.js中的process方法就是所有插件初始化的地方
 
