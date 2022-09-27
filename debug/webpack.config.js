@@ -18,4 +18,5 @@ module.exports = {
     ignored: /node_modules/,
   },
 	watch: false,
+	// devtool: false,
 };
