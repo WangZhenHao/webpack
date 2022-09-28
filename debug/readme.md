@@ -33,13 +33,14 @@ runLoader方法hooks.readResource读取文件内容的相关钩子
 
 
 # 3: 如何添加输出文件
-lib\Compilation.js 中的emitAsset方法是创建最终输出文件的hash
+lib\Compilation.js 中的emitAsset方法是创建最终输出文件的hash表
 
 emitAsset方法接受三个参数file, source, assetInfo，文件名，内容，信息
 调用一般是：compilation.emitAsset(replacedFilename.path, new webpack.sources.RawSource(html, false), replacedFilename.info)
 
 compilation.assets可以看到所有要输出的文件
 
+compilation对象实在lib\Compiler.js中的this.hooks.beforeCompile.callAsync中生成
 
 # 4.webpack的流程
 1：执行lib/webpack.js文件中的webpack方法，该方法就是可以拿到compiler对象
